@@ -1,0 +1,33 @@
+///
+/// Clover Digital
+/// 
+/// Free for personal and commercial use under the CCA 3.0 license (https://www.instagram.com/cloverdigital.arg/)
+///
+
+/* Icon */
+
+	.icon {
+		@include icon;
+		border-bottom: none;
+		position: relative;
+
+		> .label {
+			display: none;
+		}
+
+		&:before {
+			line-height: inherit;
+		}
+
+		&.solid {
+			&:before {
+				font-weight: 900;
+			}
+		}
+
+		&.brands {
+			&:before {
+				font-family: 'Font Awesome 5 Brands';
+			}
+		}
+	}
