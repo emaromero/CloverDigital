@@ -155,6 +155,7 @@ document.getElementById("send-btn").addEventListener("click", function () {
 	if (!email || !message) {
 	  // Muestra el modal de error si hay campos vacíos
 	  document.getElementById("alert-modal").style.display = "block";
+	  document.getElementById("success-modal").style.display = "none"; // Aseguramos que el modal de éxito no esté abierto
 	  return; // Detiene el envío si falta algún campo
 	}
   
@@ -164,9 +165,10 @@ document.getElementById("send-btn").addEventListener("click", function () {
 	  message: formData.get("message"),
 	})
 	.then(() => {
-	  // Antes de mostrar el modal de éxito, cerramos cualquier otro modal abierto
-	  document.getElementById("alert-modal").style.display = "none"; // Cerrar el modal de alerta si estaba abierto
-	  document.getElementById("success-modal").style.display = "block"; // Mostrar el modal de éxito
+	  // Cerramos el modal de error (si estaba abierto)
+	  document.getElementById("alert-modal").style.display = "none";
+	  // Mostrar el modal de éxito
+	  document.getElementById("success-modal").style.display = "block";
 	  form.reset(); // Resetea el formulario
 	})
 	.catch((error) => {

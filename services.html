@@ -179,9 +179,11 @@
 
                 // Validación para asegurarse de que los campos no estén vacíos
                 if (!email || !message) {
-                  // Muestra el modal si hay campos vacíos
+                  // Muestra el modal de error si hay campos vacíos
                   document.getElementById("alert-modal").style.display =
                     "block";
+                  document.getElementById("success-modal").style.display =
+                    "none"; // Aseguramos que el modal de éxito no esté abierto
                   return; // Detiene el envío si falta algún campo
                 }
 
@@ -192,34 +194,59 @@
                     message: formData.get("message"),
                   })
                   .then(() => {
-                    alert("Mensaje enviado correctamente.");
-                    form.reset();
+                    // Cerramos el modal de error (si estaba abierto)
+                    document.getElementById("alert-modal").style.display =
+                      "none";
+                    // Mostrar el modal de éxito
+                    document.getElementById("success-modal").style.display =
+                      "block";
+                    form.reset(); // Resetea el formulario
                   })
                   .catch((error) => {
                     alert("Error al enviar el mensaje: " + error.text);
                   });
               });
 
-            // Cerrar el modal con el botón de cerrar
+            // Cerrar el modal de alerta con el botón de cerrar
             document
               .querySelector(".close-btn")
               .addEventListener("click", function () {
                 document.getElementById("alert-modal").style.display = "none";
               });
 
-            // Cerrar el modal con el botón "Cerrar"
+            // Cerrar el modal de éxito con el botón de cerrar
+            document
+              .querySelector(".close-btn")
+              .addEventListener("click", function () {
+                document.getElementById("success-modal").style.display = "none";
+              });
+
+            // Cerrar el modal de alerta o éxito con el botón "Cerrar"
             document
               .getElementById("close-modal-btn")
               .addEventListener("click", function () {
                 document.getElementById("alert-modal").style.display = "none";
               });
 
-            // Cerrar el modal si se hace clic fuera de la ventana del modal
+            document
+              .getElementById("close-success-modal-btn")
+              .addEventListener("click", function () {
+                document.getElementById("success-modal").style.display = "none";
+              });
+
+            // Cerrar los modales si se hace clic fuera de la ventana del modal
             window.addEventListener("click", function (event) {
-              const modal = document.getElementById("alert-modal");
-              // Solo cierra el modal si el clic es fuera del contenido del modal
-              if (event.target === modal) {
-                modal.style.display = "none";
+              const alertModal = document.getElementById("alert-modal");
+              const successModal = document.getElementById("success-modal");
+
+              // Cierra el modal de alerta si el clic es fuera de su contenido
+              if (event.target === alertModal) {
+                alertModal.style.display = "none";
+              }
+
+              // Cierra el modal de éxito si el clic es fuera de su contenido
+              if (event.target === successModal) {
+                successModal.style.display = "none";
               }
             });
           </script>
