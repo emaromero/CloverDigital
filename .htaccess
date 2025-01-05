@@ -1,0 +1,14 @@
+# Habilitar reescritura de URL
+RewriteEngine On
+
+# Redirigir todas las solicitudes a index.html, excepto si se trata de un archivo real o directorio
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ $1.html [L]
+
+ # Activar el motor de reescritura de URLs
+RewriteEngine On
+RewriteBase /
+
+# Redirigir las URLs sin la extensión .html
+RewriteRule ^(.*)$ $1.html [L]
