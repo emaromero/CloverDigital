@@ -4005,6 +4005,59 @@ input, select, textarea {
 
 		}
 
+/* Estilos del Modal */
+.modal {
+	display: none; /* Ocultar el modal por defecto */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  }
+  
+  
+  .modal-content {
+	background-color: #66B8B5; /* Fondo del modal */
+	margin: 15% auto;
+	padding: 20px;
+	border-radius: 5px;
+	width: 50%;
+	text-align: center;
+	position: relative;
+	color: white; /* Color de las letras dentro del modal */
+  }
+  
+  .close-btn {
+	color: white; /* Color de la "X" para cerrar el modal */
+	font-size: 28px;
+	font-weight: bold;
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	font-family: Arial, sans-serif;
+	cursor: pointer;
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+	color: #ddd; /* Cambiar el color de la "X" cuando se pasa el mouse */
+	text-decoration: none;
+  }
+  
+  #close-modal-btn {
+	background-color: #025F84; 
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+  }
+  
+  #close-modal-btn:hover {
+	background-color: #249293;
+  }
+  
 /* Footer */
 
 	#footer .inner {

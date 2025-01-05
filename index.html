@@ -30,10 +30,8 @@
 						<div class="inner">
 							<h2>Menu</h2>
 							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="#" target="_blank">Log In</a></li>
-								<li><a href="#" target="_blank">Sign Up</a></li>
+								<li><a href="index.html">Inicio</a></li>
+								<li><a href="services.html">Servicios</a></li>
 							</ul>
 							<a href="#" target="_blank" class="close">Close</a>
 						</div>
@@ -131,10 +129,6 @@
 								<form id="contact-form">
 									<div class="fields">
 										<div class="field">
-											<label for="name">Nombre</label>
-											<input type="text" name="name" id="name" required />
-										</div>
-										<div class="field">
 											<label for="email">Email</label>
 											<input type="email" name="email" id="email" required />
 										</div>
@@ -147,28 +141,58 @@
 										<li><button type="button" id="send-btn">Enviar Mensaje</button></li>
 									</ul>
 								</form>
-								
+							
 								<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-								<script>
-									emailjs.init("ZrtTkEjwFnAij-dOr"); // Reemplaza con tu Public Key de EmailJS
-								
-									document.getElementById("send-btn").addEventListener("click", function () {
-										const form = document.getElementById("contact-form"); // Asegúrate de que este ID coincida con el del formulario
-										const formData = new FormData(form);
-								
-										emailjs.send("service_q8bnf23", "template_nw9a6ff", {
-											from_name: formData.get("name"), // Cambié el nombre para que coincida con EmailJS
-											from_email: formData.get("email"), // Asegúrate de que "from_email" esté configurado en tu template de EmailJS
-											message: formData.get("message"),
-										})
-										.then(() => {
-											alert("Mensaje enviado correctamente.");
-											form.reset();
-										})
-										.catch((error) => {
-											alert("Error al enviar el mensaje: " + error.text);
-										});
-									});
+								<script>emailjs.init("ZrtTkEjwFnAij-dOr");
+
+document.getElementById("send-btn").addEventListener("click", function () {
+  const form = document.getElementById("contact-form");
+  const formData = new FormData(form);
+
+  const email = formData.get("email");
+  const message = formData.get("message");
+
+  // Validación para asegurarse de que los campos no estén vacíos
+  if (!email || !message) {
+    // Muestra el modal si hay campos vacíos
+    document.getElementById("alert-modal").style.display = "block";
+    return; // Detiene el envío si falta algún campo
+  }
+
+  emailjs.send("service_q8bnf23", "template_nw9a6ff", {
+    from_name: formData.get("name"),
+    from_email: formData.get("email"),
+    message: formData.get("message"),
+  })
+  .then(() => {
+    alert("Mensaje enviado correctamente.");
+    form.reset();
+  })
+  .catch((error) => {
+    alert("Error al enviar el mensaje: " + error.text);
+  });
+});
+
+// Cerrar el modal con el botón de cerrar
+document.querySelector(".close-btn").addEventListener("click", function () {
+  document.getElementById("alert-modal").style.display = "none";
+});
+
+// Cerrar el modal con el botón "Cerrar"
+document.getElementById("close-modal-btn").addEventListener("click", function () {
+  document.getElementById("alert-modal").style.display = "none";
+});
+
+// Cerrar el modal si se hace clic fuera de la ventana del modal
+window.addEventListener("click", function (event) {
+  const modal = document.getElementById("alert-modal");
+  // Solo cierra el modal si el clic es fuera del contenido del modal
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+									
 								</script>
 								
 								
@@ -190,6 +214,28 @@
 
 			</div>
 
+<!-- Modal de Alerta -->
+<div id="alert-modal" class="modal">
+	<div class="modal-content">
+	  <span class="close-btn">&times;</span>
+	  <h2>¡Faltan campos!</h2>
+	  <p>Por favor, completa todos los campos antes de enviar el mensaje.</p>
+	  <button id="close-modal-btn">Cerrar</button>
+	</div>
+  </div>
+  
+  <!-- Modal de éxito -->
+<div id="success-modal" class="modal">
+	<div class="modal-content">
+	  <span class="close-btn">&times;</span>
+	  <h2>¡Éxito!</h2>
+	  <p>En breve nos comunicaremos con vos.</p>
+	  <button id="close-success-modal-btn">Cerrar</button>
+	</div>
+  </div>
+  
+  
+  
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
