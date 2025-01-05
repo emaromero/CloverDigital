@@ -145,75 +145,108 @@
 								<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 								<script>emailjs.init("ZrtTkEjwFnAij-dOr");
 
-document.getElementById("send-btn").addEventListener("click", function () {
-  const form = document.getElementById("contact-form");
-  const formData = new FormData(form);
+			document
+						.getElementById("send-btn")
+						.addEventListener("click", function () {
+							const form = document.getElementById("contact-form");
+							const formData = new FormData(form);
 
-  const email = formData.get("email");
-  const message = formData.get("message");
+							const email = formData.get("email");
+							const message = formData.get("message");
 
-  // Validación para asegurarse de que los campos no estén vacíos
-  if (!email || !message) {
-    // Muestra el modal si hay campos vacíos
-    document.getElementById("alert-modal").style.display = "block";
-    return; // Detiene el envío si falta algún campo
-  }
+							// Validación para asegurarse de que los campos no estén vacíos
+							if (!email || !message) {
+							// Muestra el modal de error si hay campos vacíos
+							document.getElementById("alert-modal").style.display =
+								"block";
+							document.getElementById("success-modal").style.display =
+								"none"; // Aseguramos que el modal de éxito no esté abierto
+							return; // Detiene el envío si falta algún campo
+							}
 
-  emailjs.send("service_q8bnf23", "template_nw9a6ff", {
-    from_name: formData.get("name"),
-    from_email: formData.get("email"),
-    message: formData.get("message"),
-  })
-  .then(() => {
-    alert("Mensaje enviado correctamente.");
-    form.reset();
-  })
-  .catch((error) => {
-    alert("Error al enviar el mensaje: " + error.text);
-  });
-});
+							emailjs
+							.send("service_q8bnf23", "template_nw9a6ff", {
+								from_name: formData.get("name"),
+								from_email: formData.get("email"),
+								message: formData.get("message"),
+							})
+							.then(() => {
+								// Cerramos el modal de error (si estaba abierto)
+								document.getElementById("alert-modal").style.display =
+								"none";
+								// Mostrar el modal de éxito
+								document.getElementById("success-modal").style.display =
+								"block";
+								form.reset(); // Resetea el formulario
+							})
+							.catch((error) => {
+								alert("Error al enviar el mensaje: " + error.text);
+							});
+						});
 
-// Cerrar el modal con el botón de cerrar
-document.querySelector(".close-btn").addEventListener("click", function () {
-  document.getElementById("alert-modal").style.display = "none";
-});
+						// Cerrar el modal de alerta con el botón de cerrar
+						document
+						.querySelector(".close-btn")
+						.addEventListener("click", function () {
+							document.getElementById("alert-modal").style.display = "none";
+						});
 
-// Cerrar el modal con el botón "Cerrar"
-document.getElementById("close-modal-btn").addEventListener("click", function () {
-  document.getElementById("alert-modal").style.display = "none";
-});
+						// Cerrar el modal de éxito con el botón de cerrar
+						document
+						.querySelector(".close-btn")
+						.addEventListener("click", function () {
+							document.getElementById("success-modal").style.display = "none";
+						});
 
-// Cerrar el modal si se hace clic fuera de la ventana del modal
-window.addEventListener("click", function (event) {
-  const modal = document.getElementById("alert-modal");
-  // Solo cierra el modal si el clic es fuera del contenido del modal
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
+						// Cerrar el modal de alerta o éxito con el botón "Cerrar"
+						document
+						.getElementById("close-modal-btn")
+						.addEventListener("click", function () {
+							document.getElementById("alert-modal").style.display = "none";
+						});
 
-									
+						document
+						.getElementById("close-success-modal-btn")
+						.addEventListener("click", function () {
+							document.getElementById("success-modal").style.display = "none";
+						});
+
+						// Cerrar los modales si se hace clic fuera de la ventana del modal
+						window.addEventListener("click", function (event) {
+						const alertModal = document.getElementById("alert-modal");
+						const successModal = document.getElementById("success-modal");
+
+						// Cierra el modal de alerta si el clic es fuera de su contenido
+						if (event.target === alertModal) {
+							alertModal.style.display = "none";
+						}
+
+						// Cierra el modal de éxito si el clic es fuera de su contenido
+						if (event.target === successModal) {
+							successModal.style.display = "none";
+						}
+						});
 								</script>
 								
 								
 								
-								<ul class="contact">
-									<li class="icon solid fa-home">
-									  Buenos Aires, Argentina
-									</li>
-									<li class="icon brands fa-whatsapp">
-									  <a href="https://wa.me/5491164473603?text=Trabajemos%20juntos!" target="_blank">+54 9 11 6447-3603</a>
-									</li>
-									<li class="icon solid fa-envelope">
-									  <a href="mailto:cloverdigitalarg@gmail.com?subject=Trabajemos%20juntos!" target="_blank">cloverdigitalarg@gmail.com</a>
-									</li>
-									<li class="icon brands fa-facebook-f">
-									  <a href="https://www.facebook.com/people/Clover-Digital/61570512932271/" target="_blank">facebook.com/Clover-Digital</a>
-									</li>
-									<li class="icon brands fa-instagram">
-									  <a href="https://www.instagram.com/cloverdigital.arg/" target="_blank">instagram.com/cloverdigital.arg</a>
-									</li>
-								  </ul>
+									<ul class="contact">
+										<li class="icon solid fa-home">
+										Buenos Aires, Argentina
+										</li>
+										<li class="icon brands fa-whatsapp">
+										<a href="https://wa.me/5491164473603?text=Trabajemos%20juntos!" target="_blank">+54 9 11 6447-3603</a>
+										</li>
+										<li class="icon solid fa-envelope">
+										<a href="mailto:cloverdigitalarg@gmail.com?subject=Trabajemos%20juntos!" target="_blank">cloverdigitalarg@gmail.com</a>
+										</li>
+										<li class="icon brands fa-facebook-f">
+										<a href="https://www.facebook.com/people/Clover-Digital/61570512932271/" target="_blank">facebook.com/Clover-Digital</a>
+										</li>
+										<li class="icon brands fa-instagram">
+										<a href="https://www.instagram.com/cloverdigital.arg/" target="_blank">instagram.com/cloverdigital.arg</a>
+										</li>
+									</ul>
 							<ul class="copyright">
 								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="https://www.instagram.com/cloverdigital.arg/" target="_blank">Clover Digital</a></li>
 							</ul>
