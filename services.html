@@ -84,25 +84,48 @@
 						<h2 class="major">En un toque</h2>
 						<p> Queremos que conectes con nosotros de manera rápida y sencilla. Completa los campos con tus datos y estaremos en contacto en el menor tiempo posible. 
 							Estamos aquí para ayudarte y responder cualquier consulta que tengas sobre nuestros servicios. ¡Escribinos ahora y hablemos!</p>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field">
-									<label for="name">Nombre</label>
-									<input type="text" name="name" id="name" />
+							<form id="contact-form">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Nombre</label>
+										<input type="text" name="name" id="name" required />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" required />
+									</div>
+									<div class="field">
+										<label for="message">Mensaje</label>
+										<textarea name="message" id="message" rows="4" required></textarea>
+									</div>
 								</div>
-								<div class="field">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="message">Mensaje</label>
-									<textarea name="message" id="message" rows="4"></textarea>
-								</div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Enviar Mensaje" /></li>
-							</ul>
-						</form>
+								<ul class="actions">
+									<li><button type="button" id="send-btn cursor:pointer">Enviar Mensaje</button></li>
+								</ul>
+							</form>
+							<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+							<script>
+								emailjs.init("ZrtTkEjwFnAij-dOr"); // Reemplaza con tu Public Key de EmailJS
+							
+								document.getElementById("send-btn").addEventListener("click", function () {
+									const form = document.getElementById("contact-form");
+									const formData = new FormData(form);
+							
+									emailjs.send("service_q8bnf23", "template_nw9a6ff", {
+										name: formData.get("name"),
+										email: formData.get("email"),
+										message: formData.get("message"),
+									})
+									.then(() => {
+										alert("Mensaje enviado correctamente.");
+										form.reset();
+									})
+									.catch((error) => {
+										alert("Error al enviar el mensaje: " + error.text);
+									});
+								});
+							</script>
+							
 						<ul class="contact">
 							<li class="icon solid fa-home">
 								Buenos Aires, Argentina
