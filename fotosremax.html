@@ -1,0 +1,577 @@
+<!-- <!DOCTYPE html>
+<html lang="es-AR">
+  <head> -->
+    <title>Fotos Remax - Clover Digital</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Explora nuestros trabajos fotográficos para Remax realizados por Clover Digital. Calidad y profesionalismo en cada imagen." />
+    <meta name="keywords" content="Clover Digital, Remax, fotografía, propiedades, Buenos Aires, marketing digital" />
+    <meta name="author" content="Clover Digital" />
+    <meta name="robots" content="index, follow" />
+    <meta name="geo.region" content="AR-B" />
+    <meta name="geo.placename" content="Buenos Aires" />
+    <meta name="geo.position" content="-34.603722;-58.381592" />
+    <meta name="ICBM" content="-34.603722, -58.381592" />
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Fotos Remax - Clover Digital" />
+    <meta property="og:description" content="Conoce nuestros trabajos fotográficos para Remax. Imágenes que destacan propiedades con estilo y profesionalismo." />
+    <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AP1GczM3mAP1vxr8LjeK_aPM8k0HgFUdvoka_gx_W090Xz4vOAUpfybrZ6Z_VIRbq09R4tSIYkpqba2RAcCvhArVr9DbyyrIY8oq6ueEX3L2J30WFfMA_W7Tc_-Bp7veQFvEk3Ln62mSf2ILzcZaIwTC0Ncf=w953-h953-s-no-gm?authuser=0" />
+    <meta property="og:url" content="https://cloverdigital.vercel.app/fotosremax" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:image:width" content="559" />
+    <meta property="og:image:height" content="559" />
+    <meta property="og:image:alt" content="Logo de Clover Digital" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczM3mAP1vxr8LjeK_aPM8k0HgFUdvoka_gx_W090Xz4vOAUpfybrZ6Z_VIRbq09R4tSIYkpqba2RAcCvhArVr9DbyyrIY8oq6ueEX3L2J30WFfMA_W7Tc_-Bp7veQFvEk3Ln62mSf2ILzcZaIwTC0Ncf=w953-h953-s-no-gm?authuser=0" type="image/png" />
+
+    <!-- JSON-LD Script -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Clover Digital",
+      "url": "https://cloverdigital.vercel.app",
+      "logo": "https://lh3.googleusercontent.com/pw/AP1GczM3mAP1vxr8LjeK_aPM8k0HgFUdvoka_gx_W090Xz4vOAUpfybrZ6Z_VIRbq09R4tSIYkpqba2RAcCvhArVr9DbyyrIY8oq6ueEX3L2J30WFfMA_W7Tc_-Bp7veQFvEk3Ln62mSf2ILzcZaIwTC0Ncf=w953-h953-s-no-gm?authuser=0",
+      "sameAs": [
+        "https://www.facebook.com/people/Clover-Digital/61570512932271/",
+        "https://www.instagram.com/cloverdigital.arg/"
+      ]
+    }
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Estilos específicos -->
+    <style>
+      /* Estilos base hasta 1280px */
+      .wrapper.spotlight .inner {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+      }
+      .wrapper.spotlight:nth-child(2n) .inner {
+        flex-direction: row-reverse;
+      }
+      .wrapper.spotlight .carousel-container {
+        margin: 0 2em 0 0;
+        width: 18em; /* Tamaño base hasta 1280px */
+        position: relative;
+      }
+      .wrapper.spotlight:nth-child(2n) .carousel-container {
+        margin: 0 0 0 2em;
+      }
+      .wrapper.spotlight .carousel {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
+        aspect-ratio: 3 / 2;
+      }
+      .wrapper.spotlight .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+        height: 100%;
+      }
+      .wrapper.spotlight .carousel-item {
+        flex: 0 0 100%;
+        height: 100%;
+      }
+      .wrapper.spotlight .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+      }
+      .wrapper.spotlight .carousel-prev, 
+      .wrapper.spotlight .carousel-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        color: rgba(255, 255, 255, 0.75);
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        width: 15px; /* Tamaño base hasta 1280px */
+        height: 15px;
+        transition: color 0.2s ease-in-out;
+      }
+      .wrapper.spotlight .carousel-prev:hover, 
+      .wrapper.spotlight .carousel-next:hover {
+        color: #ffffff;
+      }
+      .wrapper.spotlight .carousel-prev {
+        left: 5px;
+      }
+      .wrapper.spotlight .carousel-next {
+        right: 5px;
+      }
+      .wrapper.spotlight .carousel-prev svg, 
+      .wrapper.spotlight .carousel-next svg {
+        width: 100%;
+        height: 100%;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .wrapper.spotlight .carousel-prev, 
+      .wrapper.spotlight .carousel-next {
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wrapper.spotlight .content {
+        width: 100%;
+      }
+      .wrapper.spotlight .content h2.major {
+        margin-bottom: 0.5em;
+      }
+      .wrapper.spotlight .content p {
+        margin-bottom: 1em;
+      }
+
+      /* Ajustes para pantallas > 1280px */
+      @media screen and (min-width: 1281px) {
+        .wrapper.spotlight .carousel-container {
+          width: 22em; /* Tamaño más grande */
+          margin: 0 3em 0 0; /* Más espaciado */
+        }
+        .wrapper.spotlight:nth-child(2n) .carousel-container {
+          margin: 0 0 0 3em;
+        }
+        .wrapper.spotlight .carousel-prev, 
+        .wrapper.spotlight .carousel-next {
+          width: 20px; /* Botones más grandes */
+          height: 20px;
+        }
+        .wrapper.spotlight .carousel-prev {
+          left: 10px;
+        }
+        .wrapper.spotlight .carousel-next {
+          right: 10px;
+        }
+        .wrapper.spotlight .content h2.major {
+          font-size: 1.5em; /* Título más grande */
+        }
+        .wrapper.spotlight .content p {
+          font-size: 1.1em; /* Texto más grande */
+        }
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1><a href="/">Clover Digital</a></h1>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <div class="inner">
+          <h2>Menu</h2>
+          <ul class="links">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/services.html">Servicios</a></li>
+            <li><a href="/fotosremax.html">Fotos Remax</a></li>
+          </ul>
+          <a href="#" target="_blank" class="close">Close</a>
+        </div>
+      </nav>
+
+      <section id="banner">
+        <div class="inner">
+          <h2 class="league-spartan-bold">Nuestros trabajos</h2>
+          <p class="league-spartan-bold">Un poco de nuestros trabajos en el sector inmobiliario</p>
+        </div>
+      </section>
+
+      <!-- Trabajos -->
+      <section id="wrapper">
+        <!-- Propiedad Tilcara -->
+        <section class="wrapper spotlight style1">
+          <div class="inner">
+            <div class="carousel-container">
+              <div class="carousel" data-carousel data-property="tilcara">
+                <div class="carousel-inner" data-carousel-inner>
+                  <div class="carousel-item"><img src="./images/tilcara-1.jpg" alt="Tilcara 1"></div>
+                  <div class="carousel-item"><img src="./images/tilcara-2.jpg" alt="Tilcara 2"></div>
+                  <div class="carousel-item"><img src="./images/tilcara-3.jpg" alt="Tilcara 3"></div>
+                  <div class="carousel-item"><img src="./images/tilcara-4.jpg" alt="Tilcara 4"></div>
+                  <div class="carousel-item"><img src="./images/tilcara-5.jpg" alt="Tilcara 5"></div>
+                  <div class="carousel-item"><img src="./images/tilcara-6.jpg" alt="Tilcara 6"></div>
+                  <div class="carousel-item"><img src="./images/tilcara-7.jpg" alt="Tilcara 7"></div>
+                  <div class="carousel-item"><img src="./images/tilcara-8.jpg" alt="Tilcara 8"></div>
+                </div>
+                <button class="carousel-prev" data-prev>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+                </button>
+                <button class="carousel-next" data-next>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="content">
+              <h2 class="major">Propiedad Tilcara</h2>
+              <p>Realizamos un trabajo fotográfico completo para esta propiedad en Tilcara, capturando cada detalle con calidad profesional. Las imágenes destacan los espacios interiores y exteriores, ideales para promocionar esta joya inmobiliaria en el mercado.</p>
+              <a href="#" class="special">Ver más</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Propiedad Purmamarca -->
+        <section class="wrapper alt spotlight style2">
+          <div class="inner">
+            <div class="content">
+              <h2 class="major">Propiedad Purmamarca</h2>
+              <p>Para esta propiedad en Purmamarca, creamos un set de fotos que resalta su encanto natural y arquitectura única. Cada imagen está diseñada para atraer a potenciales compradores, mostrando lo mejor de este lugar especial.</p>
+              <a href="#" class="special">Ver más</a>
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" data-carousel data-property="purmamarca">
+                <div class="carousel-inner" data-carousel-inner>
+                  <div class="carousel-item"><img src="./images/purmamarca-1.jpg" alt="Purmamarca 1"></div>
+                  <div class="carousel-item"><img src="./images/purmamarca-2.jpg" alt="Purmamarca 2"></div>
+                  <div class="carousel-item"><img src="./images/purmamarca-3.jpg" alt="Purmamarca 3"></div>
+                  <div class="carousel-item"><img src="./images/purmamarca-4.jpg" alt="Purmamarca 4"></div>
+                  <div class="carousel-item"><img src="./images/purmamarca-5.jpg" alt="Purmamarca 5"></div>
+                  <div class="carousel-item"><img src="./images/purmamarca-6.jpg" alt="Purmamarca 6"></div>
+                  <div class="carousel-item"><img src="./images/purmamarca-7.jpg" alt="Purmamarca 7"></div>
+                  <div class="carousel-item"><img src="./images/purmamarca-8.jpg" alt="Purmamarca 8"></div>
+                </div>
+                <button class="carousel-prev" data-prev>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+                </button>
+                <button class="carousel-next" data-next>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Propiedad Humahuaca -->
+        <section class="wrapper spotlight style3">
+          <div class="inner">
+            <div class="carousel-container">
+              <div class="carousel" data-carousel data-property="humahuaca">
+                <div class="carousel-inner" data-carousel-inner>
+                  <div class="carousel-item"><img src="./images/humahuaca-1.jpg" alt="Humahuaca 1"></div>
+                  <div class="carousel-item"><img src="./images/humahuaca-2.jpg" alt="Humahuaca 2"></div>
+                  <div class="carousel-item"><img src="./images/humahuaca-3.jpg" alt="Humahuaca 3"></div>
+                  <div class="carousel-item"><img src="./images/humahuaca-4.jpg" alt="Humahuaca 4"></div>
+                  <div class="carousel-item"><img src="./images/humahuaca-5.jpg" alt="Humahuaca 5"></div>
+                  <div class="carousel-item"><img src="./images/humahuaca-6.jpg" alt="Humahuaca 6"></div>
+                  <div class="carousel-item"><img src="./images/humahuaca-7.jpg" alt="Humahuaca 7"></div>
+                  <div class="carousel-item"><img src="./images/humahuaca-8.jpg" alt="Humahuaca 8"></div>
+                </div>
+                <button class="carousel-prev" data-prev>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+                </button>
+                <button class="carousel-next" data-next>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="content">
+              <h2 class="major">Propiedad Humahuaca</h2>
+              <p>En Humahuaca, nuestro equipo capturó la esencia de esta propiedad con fotos de alta calidad. Desde vistas panorámicas hasta detalles interiores, este trabajo fotográfico eleva su atractivo para el sector inmobiliario.</p>
+              <a href="#" class="special">Ver más</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Propiedad Maimará -->
+        <section class="wrapper alt spotlight style7">
+          <div class="inner">
+            <div class="content">
+              <h2 class="major">Propiedad Maimará</h2>
+              <p>Este proyecto en Maimará incluyó una sesión fotográfica completa que realza sus características distintivas. Las imágenes profesionales muestran el potencial de esta propiedad, perfecta para destacar en el mercado de Remax.</p>
+              <a href="#" class="special">Ver más</a>
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" data-carousel data-property="maimara">
+                <div class="carousel-inner" data-carousel-inner>
+                  <div class="carousel-item"><img src="./images/maimara-1.jpg" alt="Maimará 1"></div>
+                  <div class="carousel-item"><img src="./images/maimara-2.jpg" alt="Maimará 2"></div>
+                  <div class="carousel-item"><img src="./images/maimara-3.jpg" alt="Maimará 3"></div>
+                  <div class="carousel-item"><img src="./images/maimara-4.jpg" alt="Maimará 4"></div>
+                  <div class="carousel-item"><img src="./images/maimara-5.jpg" alt="Maimará 5"></div>
+                  <div class="carousel-item"><img src="./images/maimara-6.jpg" alt="Maimará 6"></div>
+                  <div class="carousel-item"><img src="./images/maimara-7.jpg" alt="Maimará 7"></div>
+                  <div class="carousel-item"><img src="./images/maimara-8.jpg" alt="Maimará 8"></div>
+                </div>
+                <button class="carousel-prev" data-prev>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+                </button>
+                <button class="carousel-next" data-next>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Footer -->
+      <section id="footer">
+        <div class="inner">
+          <h2 class="major">En un toque</h2>
+          <p>
+            Queremos que conectes con nosotros de manera rápida y sencilla.
+            Completa los campos con tus datos y estaremos en contacto en el
+            menor tiempo posible. Estamos aquí para ayudarte y responder
+            cualquier consulta que tengas sobre nuestros servicios. ¡Escribinos
+            ahora y hablemos!
+          </p>
+          <form id="contact-form">
+            <div class="fields">
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="field">
+                <label for="message">Mensaje</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li>
+                <button type="button" id="send-btn">Enviar Mensaje</button>
+              </li>
+            </ul>
+          </form>
+
+          <ul class="contact">
+            <li class="icon solid fa-home">Buenos Aires, Argentina</li>
+            <li class="icon brands fa-whatsapp">
+              <a href="https://wa.me/5491164473603?text=Trabajemos%20juntos!" target="_blank">+54 9 11 6447-3603</a>
+            </li>
+            <li class="icon solid fa-envelope">
+              <a href="mailto:cloverdigitalarg@gmail.com?subject=Trabajemos%20juntos!" target="_blank">cloverdigitalarg@gmail.com</a>
+            </li>
+            <li class="icon brands fa-facebook-f">
+              <a href="https://www.facebook.com/people/Clover-Digital/61570512932271/" target="_blank">facebook.com/Clover-Digital</a>
+            </li>
+            <li class="icon brands fa-instagram">
+              <a href="https://www.instagram.com/cloverdigital.arg/" target="_blank">instagram.com/cloverdigital.arg</a>
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>© Untitled Inc. All rights reserved.</li>
+            <li>Design: <a href="https://www.instagram.com/cloverdigital.arg/" target="_blank">Clover Digital</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modal de Alerta -->
+    <div id="alert-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">×</span>
+        <h2>¡Faltan campos!</h2>
+        <p>Por favor, completa todos los campos antes de enviar el mensaje.</p>
+        <button id="close-modal-btn">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Modal de éxito -->
+    <div id="success-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">×</span>
+        <h2>¡Éxito!</h2>
+        <p>En breve nos comunicaremos con vos.</p>
+        <button id="close-success-modal-btn">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({ publicKey: "ZrtTkEjwFnAij-dOr" });
+      })();
+    </script>
+    <script>
+      // Script para los carruseles
+      document.querySelectorAll('[data-carousel]').forEach(carousel => {
+        const inner = carousel.querySelector('[data-carousel-inner]');
+        const items = inner.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let mouseStartX = 0;
+        let isDragging = false;
+
+        const updateCarousel = () => {
+          inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        };
+
+        const nextSlide = () => {
+          currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+          updateCarousel();
+        };
+
+        const prevSlide = () => {
+          currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+          updateCarousel();
+        };
+
+        // Botones de navegación
+        carousel.querySelector('[data-prev]').addEventListener('click', prevSlide);
+        carousel.querySelector('[data-next]').addEventListener('click', nextSlide);
+
+        // Navegación por clic o toque en mitades
+        carousel.addEventListener('click', (e) => {
+          const rect = carousel.getBoundingClientRect();
+          const clickX = e.clientX - rect.left;
+          const halfWidth = rect.width / 2;
+
+          if (clickX < halfWidth) {
+            prevSlide(); // Mitad izquierda
+          } else {
+            nextSlide(); // Mitad derecha
+          }
+        });
+
+        // Soporte táctil
+        carousel.addEventListener('touchstart', (e) => {
+          touchStartX = e.touches[0].clientX;
+        });
+        carousel.addEventListener('touchmove', (e) => {
+          touchEndX = e.touches[0].clientX;
+        });
+        carousel.addEventListener('touchend', () => {
+          const swipeDistance = touchEndX - touchStartX;
+          const swipeThreshold = 50;
+          if (swipeDistance > swipeThreshold) prevSlide();
+          else if (swipeDistance < -swipeThreshold) nextSlide();
+        });
+
+        // Soporte para arrastrar con mouse
+        carousel.addEventListener('mousedown', (e) => {
+          isDragging = true;
+          mouseStartX = e.clientX;
+          inner.style.transition = 'none';
+        });
+        document.addEventListener('mousemove', (e) => {
+          if (!isDragging) return;
+          const deltaX = e.clientX - mouseStartX;
+          const percentage = (deltaX / carousel.offsetWidth) * 100;
+          inner.style.transform = `translateX(calc(-${currentIndex * 100}% + ${percentage}px))`;
+        });
+        document.addEventListener('mouseup', (e) => {
+          if (!isDragging) return;
+          isDragging = false;
+          inner.style.transition = 'transform 0.5s ease';
+          const deltaX = e.clientX - mouseStartX;
+          const swipeThreshold = 50;
+          if (deltaX > swipeThreshold) prevSlide();
+          else if (deltaX < -swipeThreshold) nextSlide();
+          else updateCarousel();
+        });
+      });
+
+      // Script para el formulario de contacto
+      document.getElementById("send-btn").addEventListener("click", function () {
+        const form = document.getElementById("contact-form");
+        const formData = new FormData(form);
+        const email = formData.get("email");
+        const message = formData.get("message");
+
+        if (!email || !message) {
+          document.getElementById("alert-modal").style.display = "block";
+          document.getElementById("success-modal").style.display = "none";
+          return;
+        }
+
+        emailjs.send("service_q8bnf23", "template_nw9a6ff", {
+          from_name: formData.get("name"),
+          from_email: email,
+          message: message,
+        }).then(() => {
+          document.getElementById("alert-modal").style.display = "none";
+          document.getElementById("success-modal").style.display = "block";
+          form.reset();
+        }).catch((error) => {
+          alert("Error al enviar el mensaje: " + error.text);
+        });
+      });
+
+      document.querySelectorAll(".close-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+          document.getElementById("alert-modal").style.display = "none";
+          document.getElementById("success-modal").style.display = "none";
+        });
+      });
+
+      document.getElementById("close-modal-btn").addEventListener("click", function () {
+        document.getElementById("alert-modal").style.display = "none";
+      });
+
+      document.getElementById("close-success-modal-btn").addEventListener("click", function () {
+        document.getElementById("success-modal").style.display = "none";
+      });
+
+      window.addEventListener("click", function (event) {
+        const alertModal = document.getElementById("alert-modal");
+        const successModal = document.getElementById("success-modal");
+        if (event.target === alertModal) alertModal.style.display = "none";
+        if (event.target === successModal) successModal.style.display = "none";
+      });
+
+      // Inicializar breakpoints
+      breakpoints({
+        large: ['1281px', 'Infinity'], // Más de 1280px
+        small: ['0px', '1280px']       // Hasta 1280px
+      });
+
+      // Ejemplo de uso de breakpoints (opcional)
+      breakpoints.on('large', function() {
+        console.log('Pantalla grande (>1280px)');
+      });
+      breakpoints.on('small', function() {
+        console.log('Pantalla pequeña (<=1280px)');
+      });
+    </script>
+  </body>
+</html>

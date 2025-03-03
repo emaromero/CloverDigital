@@ -121,6 +121,11 @@ input, select, textarea {
 		}
 
 /* Type */
+	.league-spartan-bold {
+    	font-family: "League Spartan", sans-serif;
+    	font-weight: 700;
+	}
+
 
 	body, input, select, textarea {
 		color: #ffffff;
