@@ -2,10 +2,11 @@
 <html lang="es-AR">
 <head>
     <meta charset="UTF-8">
+    <!-- Define el ancho de la pantalla y la escala inicial para dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Clover Digital - Diseño Web y Redes Sociales</title>
 
-    <!-- Meta tags SEO -->
+    <!-- Meta tags SEO para optimización en buscadores -->
     <meta name="description" content="Descubre nuestros servicios de diseño web y manejo de redes sociales en Clover Digital. Conectamos lo digital con tu esencia en Buenos Aires.">
     <meta name="keywords" content="diseño web, redes sociales, Clover Digital, marketing digital, Buenos Aires, servicios digitales">
     <meta name="author" content="Clover Digital">
@@ -15,7 +16,7 @@
     <meta name="geo.position" content="-34.603722;-58.381592">
     <meta name="ICBM" content="-34.603722, -58.381592">
 
-    <!-- Open Graph -->
+    <!-- Open Graph para compartir en redes sociales -->
     <meta property="og:title" content="Clover Digital - Diseño y Marketing Digital">
     <meta property="og:description" content="Eleva tu marca con nuestros servicios de diseño web y manejo de redes sociales. ¡Conectemos hoy!">
     <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AP1GczM3mAP1vxr8LjeK_aPM8k0HgFUdvoka_gx_W090Xz4vOAUpfybrZ6Z_VIRbq09R4tSIYkpqba2RAcCvhArVr9DbyyrIY8oq6ueEX3L2J30WFfMA_W7Tc_-Bp7veQFvEk3Ln62mSf2ILzcZaIwTC0Ncf=w953-h953-s-no-gm?authuser=0">
@@ -26,10 +27,10 @@
     <meta property="og:image:height" content="559">
     <meta property="og:image:alt" content="Logo oficial de Clover Digital">
 
-    <!-- Favicon -->
+    <!-- Favicon para el ícono en la pestaña del navegador -->
     <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczM3mAP1vxr8LjeK_aPM8k0HgFUdvoka_gx_W090Xz4vOAUpfybrZ6Z_VIRbq09R4tSIYkpqba2RAcCvhArVr9DbyyrIY8oq6ueEX3L2J30WFfMA_W7Tc_-Bp7veQFvEk3Ln62mSf2ILzcZaIwTC0Ncf=w953-h953-s-no-gm?authuser=0" type="image/png">
 
-    <!-- JSON-LD -->
+    <!-- JSON-LD para datos estructurados (mejora SEO) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -44,7 +45,7 @@
     }
     </script>
 
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code para rastreo de eventos en Facebook -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -60,16 +61,26 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1284279832637867&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
+    <!-- Fin Meta Pixel Code -->
 
-    <!-- Fonts y CSS -->
+    <!-- Google Analytics (GA4) para rastrear visitas y comportamiento del usuario -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4T9VDN4G4R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date()); // Registra la fecha actual
+        gtag('config', 'G-4T9VDN4G4R'); // Configura el ID de seguimiento único
+    </script>
+    <!-- Fin Google Analytics -->
+
+    <!-- Fuentes y CSS para el estilo del sitio -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
     <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
 </head>
-
 <body class="is-preload">
     <div id="page-wrapper">
         <!-- Header -->
@@ -86,7 +97,7 @@
                 <h2 class="league-spartan-bold">Menú</h2>
                 <ul class="links">
                     <li><a href="/">Inicio</a></li>
-                    <li><a href="/services.html">Servicios</a></li>
+                    <li><a href="/services">Servicios</a></li>
                 </ul>
                 <a href="#" class="close" aria-label="Cerrar menú">Cerrar</a>
             </div>
@@ -225,7 +236,7 @@
                     </li>
                 </ul>
                 <ul class="copyright">
-                    <li>&copy; Clover Digital. Todos los derechos reservados.</li>
+                    <li>© Clover Digital. Todos los derechos reservados.</li>
                     <li>Diseño: <a href="https://www.instagram.com/cloverdigital.arg/" target="_blank" rel="noopener noreferrer">Clover Digital</a></li>
                 </ul>
             </div>
@@ -235,7 +246,7 @@
     <!-- Modales -->
     <div id="alert-modal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" aria-label="Cerrar modal de alerta">&times;</span>
+            <span class="close-btn" aria-label="Cerrar modal de alerta">×</span>
             <h2>¡Faltan campos!</h2>
             <p>Por favor, completá todos los campos antes de enviar el mensaje.</p>
             <button id="close-modal-btn">Cerrar</button>
@@ -244,7 +255,7 @@
 
     <div id="success-modal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" aria-label="Cerrar modal de éxito">&times;</span>
+            <span class="close-btn" aria-label="Cerrar modal de éxito">×</span>
             <h2>¡Éxito!</h2>
             <p>En breve nos comunicaremos con vos.</p>
             <button id="close-success-modal-btn">Cerrar</button>
@@ -259,6 +270,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Script para enviar formularios con EmailJS y manejar modales -->
     <script>
         emailjs.init("ZrtTkEjwFnAij-dOr");
 
@@ -268,24 +280,36 @@
             const email = formData.get("email");
             const message = formData.get("message");
 
+            // Validar que los campos estén completos
             if (!email || !message) {
                 document.getElementById("alert-modal").style.display = "block";
                 document.getElementById("success-modal").style.display = "none";
                 return;
             }
 
+            // Enviar el formulario con EmailJS
             emailjs.send("service_q8bnf23", "template_nw9a6ff", {
                 from_email: email,
                 message: message
             }).then(() => {
+                // Mostrar modal de éxito
                 document.getElementById("alert-modal").style.display = "none";
                 document.getElementById("success-modal").style.display = "block";
                 form.reset();
+
+                // Registrar el evento "Lead" en Meta Pixel
+                fbq('track', 'Lead', {
+                    content_name: 'Formulario de Contacto - Inicio',
+                    content_category: 'Contacto',
+                    value: 1.0, // Valor opcional del lead (puede ajustarse)
+                    currency: 'ARS' // Moneda opcional
+                });
             }).catch((error) => {
                 alert("Error al enviar el mensaje: " + error.text);
             });
         });
 
+        // Cerrar modales al hacer clic en los botones o fuera del modal
         document.querySelectorAll(".close-btn").forEach(btn => {
             btn.addEventListener("click", () => {
                 btn.closest(".modal").style.display = "none";
